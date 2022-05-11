@@ -26,9 +26,13 @@ jobs:
       run: npm run lint
 
     - name: run the TypeScript tests
-    working-directory: ./DotnetTemplate.Web
+      working-directory: ./DotnetTemplate.Web
       run: npm t
 
+  slack-notification:
+    name: Send Slack notification
+    runs-on: ubuntu-latest
+    steps:
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
