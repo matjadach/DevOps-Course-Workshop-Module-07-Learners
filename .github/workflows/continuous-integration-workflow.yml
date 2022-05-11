@@ -26,7 +26,7 @@ jobs:
       run: npm run lint
 
     - name: run the TypeScript tests
-      working-directory: ./DotnetTemplate.Web
+    working-directory: ./DotnetTemplate.Web
       run: npm t
 
     - name: Slack Notification
