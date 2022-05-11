@@ -25,4 +25,5 @@ jobs:
         npm run lint
     - name: run the TypeScript tests
       run: |
+        cd DotnetTemplate.Web
         npm t
