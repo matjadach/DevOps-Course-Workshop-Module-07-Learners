@@ -28,3 +28,10 @@ jobs:
     - name: run the TypeScript tests
       working-directory: ./DotnetTemplate.Web
       run: npm t
+
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: testapp
+        SLACK_USERNAME: GitHub Actions
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK}}
