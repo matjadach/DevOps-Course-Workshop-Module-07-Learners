@@ -10,8 +10,7 @@ jobs:
       uses: actions/checkout@v2 # Adds a step to checkout the repository code
     - name: build the C# code
       run: |
-        cd DevOps-Course-Workshop-Module-07-Learners
-        dotnet build
+        ls
     - name: run the C# test
       run: |
         dotnet test
