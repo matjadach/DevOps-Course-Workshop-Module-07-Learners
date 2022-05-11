@@ -29,12 +29,14 @@ jobs:
       working-directory: ./DotnetTemplate.Web
       run: npm t
 
-  slack-notification:
-    name: Send Slack notification
-    runs-on: ubuntu-latest
-    steps:
-    - name: Slack Notification
+    - name: Report status
+      if: always()
       uses: rtCamp/action-slack-notify@v2
+      with:
+        status: ${{ job.status}}
+        notify_when:
+          - "failure"
+          - "cancelled"
       env:
         SLACK_CHANNEL: testapp
         SLACK_USERNAME: GitHub Actions
