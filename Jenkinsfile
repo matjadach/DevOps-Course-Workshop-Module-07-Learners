@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'docker'
-    }
+    agent none
     stages {
         stage('Build the C# code & test it') {
             agent {
