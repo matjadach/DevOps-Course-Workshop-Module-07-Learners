@@ -23,7 +23,7 @@ jobs:
 
     - name: run the linter on the TypeScript code
       working-directory: ./DotnetTemplate.Web
-      run: npm run lint
+       run: npm run lint
 
     - name: run the TypeScript tests
       working-directory: ./DotnetTemplate.Web
@@ -35,7 +35,7 @@ jobs:
     needs: build
     steps:
       - name: Report status
-        if: always()
+        if: failure
         uses: rtCamp/action-slack-notify@v2
         with:
           status: ${{ job.status }}
