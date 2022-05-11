@@ -22,7 +22,7 @@ jobs:
         npm run build
     - name: run the linter on the TypeScript code
       run: |
-      npm run lint
+        npm run lint
     - name: run the TypeScript tests
       run: |
-      npm t
+        npm t
