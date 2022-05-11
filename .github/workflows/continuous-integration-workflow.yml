@@ -35,7 +35,7 @@ jobs:
     needs: build
     steps:
       - name: Report status
-        if: success
+        if: failure
         uses: rtCamp/action-slack-notify@v2
         with:
           status: ${{ job.status }}
